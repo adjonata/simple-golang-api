@@ -2,11 +2,11 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	swaggerFiles "github.com/swaggo/files"
-	ginSwagger "github.com/swaggo/gin-swagger"
+	// swaggerFiles "github.com/swaggo/files"
+	// ginSwagger "github.com/swaggo/gin-swagger"
 	"go-api/controllers"
 	_ "go-api/docs"
-	"go-api/models"
+	// "go-api/models"
 )
 
 // @title Swagger Example API
@@ -18,11 +18,11 @@ import (
 func main() {
 	r := gin.Default()
 
-	swaggerUrl := ginSwagger.URL("http://localhost:8080/swagger/doc.json")
+	// swaggerUrl := ginSwagger.URL("http://localhost:8080/swagger/doc.json")
 
-	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, swaggerUrl))
+	// r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, swaggerUrl))
 
-	models.ConnectDataBase()
+	// models.ConnectDataBase()
 
 	api := r.Group("/books")
 	{
